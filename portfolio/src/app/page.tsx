@@ -1,9 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import { FaLinkedinIn, FaGithub, FaXTwitter } from "react-icons/fa6";
 import { SiGithub, SiJavascript, SiMariadb, SiNextdotjs, SiNodedotjs, SiReact, SiTypescript } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { useRef } from 'react';
+
 
 export default function Home() {
+  // Redirección en la seccion de My Projects sin usar href.
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const scrollToProjects = () => {
+    projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
@@ -11,9 +20,9 @@ export default function Home() {
         <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center h-16">
             <div className="flex space-x-8">
-              <a href="#projects" className="text-gray-300 hover:text-white transition-colors font-bold zoomonhover text">
+              <button onClick={scrollToProjects} className="text-gray-300 hover:text-white transition-colors font-bold zoomonhover text">
                 projects
-              </a>
+              </button>
               <a href="#about-me" className="text-gray-300 hover:text-white transition-colors font-bold zoomonhover">
                 about me
               </a>
@@ -135,8 +144,34 @@ export default function Home() {
               </div>
             </div>
           </div>
+          
+          {/* My Projects */}
+          <div ref={projectsRef} className="mt-16">
+            <div className="flex items-start justify-center">
+              <div className="max-w-3xl w-full">
+                <div className="flex items-center justify-between mb-8">
+                  {/* Título principal */}
+                  <div className="flex-1">
+                    <div className="flex items-center justify-center">
+                      <h1 className="text-xl font-bold" style={{ color: "#f5d487" }}>
+                        projects i'm working/worked on
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Contenido de My Projects */}
+                <div>
+                  <p className="text-gray-300 text-xs">
+                    a project will be added soon, sorry :C
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </div>
   );
 }
+
