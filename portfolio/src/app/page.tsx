@@ -96,37 +96,37 @@ export default function Home() {
                 {/* Contenido de Tech-Stack */}
                 <div className="flex flex-col gap-3">
                   <div className="flex gap-3">
-                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow hover:bg-zinc-700 transition select-none"> 
+                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow transition select-none tech-slide-hover"> 
                       <SiReact className="text-cyan-400 text-xl" />
                       React
                     </div>
-                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow hover:bg-zinc-700 transition select-none"> 
+                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow transition select-none tech-slide-hover"> 
                       <SiNodedotjs className="text-green-400 text-xl" />
                       Node.js
                     </div>
-                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow hover:bg-zinc-700 transition select-none"> 
+                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow transition select-none tech-slide-hover"> 
                       <SiTypescript className="text-blue-400 text-xl" />
                       TypeScript.js
                     </div>
-                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow hover:bg-zinc-700 transition select-none"> 
+                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow transition select-none tech-slide-hover"> 
                       <SiJavascript className="text-yellow-400 text-xl" />
                       JavaScript.js
                     </div>
-                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow hover:bg-zinc-700 transition select-none"> 
+                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow transition select-none tech-slide-hover"> 
                       <SiMariadb className="text-blue-400 text-xl" />
                       MariaDB
                     </div>
-                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow hover:bg-zinc-700 transition select-none"> 
+                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow transition select-none tech-slide-hover"> 
                       <SiNextdotjs className="text-black-400 text-xl" />
                       Next.js
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow hover:bg-zinc-700 transition select-none"> 
+                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow transition select-none tech-slide-hover"> 
                       <SiGithub className="text-white-400 text-xl" />
                       Git
                     </div>
-                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow hover:bg-zinc-700 transition select-none"> 
+                    <div className="flex items-center border border-gray-700 bg-transparent gap-2 px-3 py-1.5 rounded-full font-bold text-white text-sm shadow transition select-none tech-slide-hover"> 
                       <TbBrandFramerMotion className="text-pink-400 text-xl" />
                       Framer-Motion
                     </div>
