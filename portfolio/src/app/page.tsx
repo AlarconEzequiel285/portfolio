@@ -73,7 +73,7 @@ export default function Home() {
                 <div className="flex-1">
                   <h1 className="text-4xl md:text-4xl text-white mb-4 relative">
                     <span className="animate-drop-word">hi,</span>{" "}
-                    <span className="animate-drop-word" style={{animationDelay: '0.2s'}}>i'm</span>{" "}
+                    <span className="animate-drop-word" style={{animationDelay: '0.2s'}}>i&apos;m</span>{" "}
                     <span className="animate-drop-word" style={{animationDelay: '0.4s'}}>ezequiel</span>
                     <div className="absolute bottom--1 left-0 h-0.5 bg-white animate-underline"></div>
                   </h1>
@@ -99,7 +99,7 @@ export default function Home() {
               {/* Descripción debajo */}
               <div className="relative overflow-hidden">
                 <p className="text-lg leading-relaxed animate-text-sweep">
-                 I build interactive web applications using modern technologies, such as React, Next.js, Tailwind CSS, and TypeScript. I'm very entusiastic about exploring creativity and innovation, always willing to learn new stuff. Driven by a desire to push the boundaries of web interaction.
+                 I build interactive web applications using modern technologies, such as React, Next.js, Tailwind CSS, and TypeScript. I&apos;m very entusiastic about exploring creativity and innovation, always willing to learn new stuff. Driven by a desire to push the boundaries of web interaction.
                 </p>
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function Home() {
                   <div className="flex-1">
                     <div className="flex items-center justify-center">
                       <h1 className="text-xl font-bold" style={{ color: "#f5d487" }}>
-                        projects i'm working/worked on
+                        projects i&apos;m working/worked on
                       </h1>
                     </div>
                   </div>
@@ -233,8 +233,8 @@ export default function Home() {
                     <div className="flex-1">
                       <h2 className="text-xl text-white font-bold mb-3">about me</h2>
                       <p className="text-gray-500 text-sm leading-relaxed">
-                        i'm ezequiel alarcon, from corrientes, argentina. web developer and ai enthusiastic (willing to learn more about it). besides being a it-guy,
-                        i enjoy being a gym-guy too. my favourite hobbies are watching movies pretending to be a cinephile and make (or try atleast) make good outfits. i'm 
+                        i&apos;m ezequiel alarcon, from corrientes, argentina. web developer and ai enthusiastic (willing to learn more about it). besides being a it-guy,
+                        i enjoy being a gym-guy too. my favourite hobbies are watching movies pretending to be a cinephile and make (or try atleast) make good outfits. i&apos;m 
                         always trying to keep learning and build new things. currently focusing on deep-learning React, UI/UX and some Backend.
                       </p>
                     </div>
