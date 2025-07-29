@@ -169,6 +169,43 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* About Me */}
+          <div className="mt-16">
+            <div className="flex items-start justify-center">
+              <div className="max-w-3xl w-full">
+                <div className="border border-gray-800 rounded-lg p-6">
+                  <div className="flex items-start gap-6">
+                    {/* Foto */}
+                    <div className="w-50 h-30 relative flex-shrink-0">
+                      <div className="w-full h-full bg-gray-600 rounded-full flex items-center justify-center">
+                        <Image 
+                        src="/images/image2.jpeg"
+                        alt="yea its still me"
+                        fill
+                        className="rounded object-cover"
+                        quality={100}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Línea divisoria */}
+                    <div className="w-px h-30 bg-gray-800"></div>
+
+                    {/* Contenido */}
+                    <div className="flex-1">
+                      <h2 className="text-2xl text-white font-bold mb-3">
+                        About me
+                      </h2>
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        lorem ipsum
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </div>
