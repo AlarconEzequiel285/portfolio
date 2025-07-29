@@ -5,6 +5,7 @@ import { FaLinkedinIn, FaGithub, FaXTwitter } from "react-icons/fa6";
 import { SiGithub, SiJavascript, SiMariadb, SiNextdotjs, SiNodedotjs, SiReact, SiTypescript } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { useRef } from 'react';
+import { useState } from "react";
 
 
 export default function Home() {
@@ -13,6 +14,25 @@ export default function Home() {
   const scrollToProjects = () => {
     projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+    // Redirección en la seccion de ABOUT ME sin usar href.
+    const aboutmeRef = useRef<HTMLDivElement>(null);
+    const scrollToAbout = () => {
+      projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+  //Hover iluminado que sigue al mouse por ahora en seccion about me
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [hovering, setHovering] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+  
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
@@ -23,9 +43,9 @@ export default function Home() {
               <button onClick={scrollToProjects} className="text-gray-300 hover:text-white transition-colors font-bold zoomonhover text">
                 projects
               </button>
-              <a href="#about-me" className="text-gray-300 hover:text-white transition-colors font-bold zoomonhover">
+              <button onClick={scrollToAbout} className="text-gray-300 hover:text-white transition-colors font-bold zoomonhover text">
                 about me
-              </a>
+              </button>
               <a href="https://mail.google.com/mail/?view=cm&to=alarcon.ezequiel285@gmail.com" className="text-gray-300 hover:text-white transition-colors font-bold zoomonhover">
                 contact me
               </a>
@@ -171,34 +191,51 @@ export default function Home() {
           </div>
 
           {/* About Me */}
-          <div className="mt-16">
+          <div ref={aboutmeRef} className="mt-16">
             <div className="flex items-start justify-center">
               <div className="max-w-3xl w-full">
-                <div className="border border-gray-800 rounded-lg p-6">
-                  <div className="flex items-start gap-6">
+                {/* Contenedor principal con hover tracking */}
+                <div
+                  className="relative border border-gray-800 rounded-lg p-6 overflow-hidden"
+                  onMouseMove={handleMouseMove}
+                  onMouseEnter={() => setHovering(true)}
+                  onMouseLeave={() => setHovering(false)}
+                >
+                  {/* Efecto hover que sigue al mouse */}
+                  <div
+                    className={`pointer-events-none absolute w-60 h-60 rounded-full bg-yellow-400 blur-[75px] transition-opacity duration-2000 ease-out ${
+                      hovering ? 'opacity-25' : 'opacity-0'
+                    }`}
+                    style={{
+                      left: mousePos.x - 120,
+                      top: mousePos.y - 120,
+                    }}
+                  />
+
+                  <div className="flex items-start gap-7 relative z-10">
                     {/* Foto */}
-                    <div className="w-50 h-30 relative flex-shrink-0">
-                      <div className="w-full h-full bg-gray-600 rounded-full flex items-center justify-center">
+                    <div className="w-60 h-30 relative flex-shrink-0">
+                      <div>
                         <Image 
-                        src="/images/image2.jpeg"
-                        alt="yea its still me"
-                        fill
-                        className="rounded object-cover"
-                        quality={100}
+                          src="/images/image2.jpeg"
+                          alt="yea its still me"
+                          fill
+                          className="rounded object-cover translate-y-10"
+                          quality={100}
                         />
                       </div>
                     </div>
 
                     {/* Línea divisoria */}
-                    <div className="w-px h-30 bg-gray-800"></div>
+                    <div className="w-px h-50 bg-gray-800"></div>
 
                     {/* Contenido */}
                     <div className="flex-1">
-                      <h2 className="text-2xl text-white font-bold mb-3">
-                        About me
-                      </h2>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        lorem ipsum
+                      <h2 className="text-xl text-white font-bold mb-3">about me</h2>
+                      <p className="text-gray-500 text-sm leading-relaxed">
+                        i'm ezequiel alarcon, from corrientes, argentina. web developer and ai enthusiastic (willing to learn more about it). besides being a it-guy,
+                        i enjoy being a gym-guy too. my favourite hobbies are watching movies pretending to be a cinephile and make (or try atleast) make good outfits. i'm 
+                        always trying to keep learning and build new things. currently focusing on deep-learning React, UI/UX and some Backend.
                       </p>
                     </div>
                   </div>
